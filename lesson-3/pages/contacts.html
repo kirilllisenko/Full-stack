@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/style/style.css" />
+		<title>Contacts</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ul class="nav__list">
+					<li><a class="link" href="../index.html">Home</a></li>
+					<li><a class="link" href="about.html">About</a></li>
+					<li><a class="link" href="contacts.html">Contacts</a></li>
+					<li><a class="link" href="articles.html">Articles</a></li>
+					<li><a class="link" href="gallery.html">Gallery</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<form action="" method="get">
+				<fieldset>
+					<legend>Контактная информация:</legend>
+					<div>
+						<label for="name">Ваше имя:</label>
+						<input
+							type="text"
+							placeholder="Имя"
+							id="name"
+							name="name"
+							required
+						/>
+					</div>
+					<div>
+						<label for="surname">Ваша фамилия:</label>
+						<input
+							type="text"
+							placeholder="Фамилия"
+							id="surname"
+							name="surname"
+							required
+						/>
+					</div>
+					<div>
+						<label for="phone">Номер телефона:</label>
+						<input
+							type="tel"
+							placeholder="+380 99 123-45-67"
+							id="phone"
+							name="phone"
+							required
+						/>
+					</div>
+					<div>
+						<label for="email">Ваш email:</label>
+						<input
+							type="email"
+							placeholder="1234@text.com"
+							id="email"
+							name="email"
+							required
+						/>
+					</div>
+				</fieldset>
+				<h2>Подбор автомобиля:</h2>
+				<div>
+					<label for="Car_body">Тип кузова:</label>
+					<select id="Car_body" name="Car_body">
+						<option value="wagon">Универсал</option>
+						<option value="sedan">Седан</option>
+						<option value="coupe">Купе</option>
+						<option value="suv">Внедорожник</option>
+					</select>
+				</div>
+				<p>Выберите марку автомобиля:</p>
+				<div>
+					<label for="mazda">Mazda</label>
+					<input type="checkbox" id="mazda" name="Car_make" value="mazda" />
+				</div>
+				<div>
+					<label for="honda">Honda</label>
+					<input type="checkbox" id="honda" name="Car_make" value="honda" />
+				</div>
+				<div>
+					<label for="bmw">BMW</label>
+					<input type="checkbox" id="bmw" name="Car_make" value="bmw" />
+				</div>
+				<div>
+					<label for="kia">Kia</label>
+					<input type="checkbox" id="kia" name="Car_make" value="kia" />
+				</div>
+				<p>Выберите тип топлива:</p>
+				<div>
+					<label for="petrol">Бензин</label>
+					<input type="radio" id="petrol" name="fuel" value="petrol" checked />
+				</div>
+				<div>
+					<label for="diesel">Дизель</label>
+					<input type="radio" id="diesel" name="fuel" value="diesel" />
+				</div>
+				<div>
+					<label for="gbo">ГБО</label>
+					<input type="radio" id="gbo" name="fuel" value="gbo" />
+				</div>
+				<br />
+				<div>
+					<button type="reset" class="btn">Отчистить</button>
+					<button type="submit" class="btn">Отправить</button>
+				</div>
+			</form>
+		</main>
+		<footer>
+			<p>&copy;Copyright 2026. All rights reserved</p>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,15 @@
+body {
+
+}
+.nav__list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 50px;
+    font-size: 20px;
+
+}
+.link {
+    color: black;
+    text-decoration: none;
+}

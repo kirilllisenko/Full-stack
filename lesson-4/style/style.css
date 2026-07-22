@@ -1,0 +1,59 @@
+body {
+    
+}
+
+.nav__list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 50px;
+    font-size: 20px;
+
+}
+.link {
+    color: black;
+    text-decoration: none;
+}
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #4CAF50;
+    cursor: pointer;
+}
+.btn {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    background: black;
+    color: aliceblue;
+}
+
+#color_p {
+    color: blue;
+}
+div > p {
+    color: yellow;
+}
+
+div p span {
+    color: #4CAF50;
+}
+
+h1 + p {
+    color:red;
+}
+span ~ p {
+    color: aqua;
+}
+
+
+footer {
+    font-size: 14px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+
