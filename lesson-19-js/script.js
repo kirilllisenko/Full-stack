@@ -81,75 +81,73 @@
 // ==== ДАНІ (не змінювати) ====
 
 
-const currentYear = 2026
+const currentYear = 2026;
 
-let birthYear = '1994'
-console.log(typeof birthYear)
+let birthYear = '1994';
+console.log(typeof birthYear);
 
-birthYear = Number(birthYear)
-console.log(birthYear)
+birthYear = Number(birthYear);
+console.log(birthYear);
 
-let ageIn10Years = currentYear - birthYear
-let ageIn10Years1 = ageIn10Years + 10
+let ageIn10Years = currentYear - birthYear;
+let ageIn10Years1 = ageIn10Years + 10;
 
-console.log(ageIn10Years)
-console.log(ageIn10Years1)
+console.log(ageIn10Years);
+console.log(ageIn10Years1);
 
-let firstName = `tARAS`
-let firstLetter = firstName.charAt(0).toUpperCase()
-let allLetters = firstName.slice(1).toLowerCase()
-let modifiedFristName = `${firstLetter}${allLetters}`
-console.log(modifiedFristName)
+let firstName = `tARAS`;
+let firstLetter = firstName.charAt(0).toUpperCase();
+let allLetters = firstName.slice(1).toLowerCase();
+let modifiedFristName = `${firstLetter}${allLetters}`;
+console.log(modifiedFristName);
 
-let lastName = 'shevchenko'
-let firstLetterlastName = lastName.charAt(0).toUpperCase()
-let allLetterslastName = lastName.slice(1)
-let modifiedlastName = `${firstLetterlastName}${allLetterslastName}`
-console.log(modifiedlastName)
+let lastName = 'shevchenko';
+let firstLetterlastName = lastName.charAt(0).toUpperCase();
+let allLetterslastName = lastName.slice(1);
+let modifiedlastName = `${firstLetterlastName}${allLetterslastName}`;
+console.log(modifiedlastName);
 
-let fullName = `${modifiedFristName} ${modifiedlastName}`
-console.log(fullName)
+let fullName = `${modifiedFristName} ${modifiedlastName}`;
+console.log(fullName);
 
-let email = 'Taras.Shevchenko@Gmail.com'
+let email = 'Taras.Shevchenko@Gmail.com';
 
-let login = email.substring(0, 16)
-let domen = email.substring(17).toLowerCase()
-console.log(login)
-console.log(domen)
+let login = email.substring(0, 16);
+let domen = email.substring(17).toLowerCase();
+console.log(login);
+console.log(domen);
 
-let atIndex = email.indexOf('@')
-let loginMasked = email.slice(0, atIndex)
-let domenMasked = email.slice(atIndex + 1)
-let maskedEmail = `${loginMasked.slice(0, 2)}***@${domenMasked}`
-console.log(maskedEmail)
+let atIndex = email.indexOf('@');
+let loginMasked = email.slice(0, atIndex);
+let domenMasked = email.slice(atIndex + 1);
+let maskedEmail = `${loginMasked.slice(0, 2)}***@${domenMasked}`;
+console.log(maskedEmail);
 
-let age = currentYear - birthYear
-let isSubscribed = true
-let isAdult = age >= 18
-console.log(isAdult)
-console.log(typeof isAdult)
+let age = currentYear - birthYear;
+let isSubscribed = true;
+let isAdult = age >= 18;
+console.log(isAdult);
+console.log(typeof isAdult);
 
-console.log(isAdult && isSubscribed)
-console.log(isAdult || isSubscribed)
-console.log(!isSubscribed)
+console.log(isAdult && isSubscribed);
+console.log(isAdult || isSubscribed);
+console.log(!isSubscribed);
 
-let nickname
-let displayName = nickname ?? fullName
-console.log(displayName)
+let nickname;
+let displayName = nickname ?? fullName;
+console.log(displayName);
 
-let ageDays = Math.round(age * 365.25)
-console.log(ageDays)
+let ageDays = Math.round(age * 365.25);
+console.log(ageDays);
 
-let code = Math.floor(Math.random() * (9999 - 1000 + 1)) + 1000
-console.log('Код підтвердження:', code)
+let code = Math.floor(Math.random() * (9999 - 1000 + 1)) + 1000;
+console.log('Код підтвердження:', code);
 
-let visits = 0
-let result = visits++
-let result2 = ++visits
-console.log('Постфіксний: результат виразу =', result, '| visits =', visits)
-console.log('Префіксний: результат виразу =', result2, '| visits =', visits)
-
-console.log(`Користувач: ${fullName} Показувати як:${displayName}Вік:`)
+let visits = 0;
+let result = visits++;
+let result2 = ++visits;
+console.log('Постфіксний: результат виразу =', result, '| visits =', visits);
+console.log('Префіксний: результат виразу =', result2, '| visits =', visits);
 
 console.log(
 	`Користувач: ${fullName} 
