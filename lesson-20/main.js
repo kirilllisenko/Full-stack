@@ -1,4 +1,4 @@
-console.log('#20. JavaScript homework: замовлення в інтернет-магазині')
+// sole.log('#20. JavaScript homework: замовлення в інтернет-магазині')
 
 /*
  * Загальні умови:
@@ -17,9 +17,8 @@ console.log('#20. JavaScript homework: замовлення в інтернет-
  *   priceStr: '1099.99 грн',
  *   quantityStr: '3',
  *   deliveryDay: 3,
- *   tempNote: 'службова нотатка, видалити перед відправкою',
- * }
- */
+ *   tempNote: 'службова нотатка, видалити перед відправкою',}
+ 
 
 /*
  * Крок 1. Об'єкти
@@ -105,9 +104,96 @@ console.log('#20. JavaScript homework: замовлення в інтернет-
  *
  * Результат: bonusSum → 61
  */
-let firstName = `Kirill`;
-let age = 26;
-let textTest = `Изучаю JS`;
-const resultTest = `${firstName} ${age} ${textTest}`
 
- console.log(resultTest);
+
+const orderObj = {
+	id: 1024,
+	customer: { firstName: 'John', lastName: 'Smith', age: 15 },
+	priceStr: '1099.99 грн',
+	quantityStr: '3',
+	deliveryDay: 3,
+	tempNote: 'службова нотатка, видалити перед відправкою',
+}
+
+orderObj.city = `Київ`;
+console.log(
+	`${orderObj.customer.firstName} ${orderObj.customer.lastName} from ${orderObj.city}`,
+);
+
+console.log(`tempNote` in orderObj);
+
+delete orderObj.tempNote;
+console.log(orderObj.tempNote);
+
+let backupOrder = structuredClone(orderObj);
+backupOrder.customer.firstName = `Ann`;
+console.log(backupOrder);
+console.log(orderObj);
+
+let paidOrder = Object.assign({}, orderObj);
+paidOrder.status = 'paid';
+console.log(paidOrder);
+
+const price = parseFloat(orderObj.priceStr);
+console.log(price);
+console.log(typeof price);
+
+const quantity = Number(orderObj.quantityStr);
+console.log(quantity);
+console.log( typeof quantity);
+
+let total = price * quantity;
+console.log(total);
+
+const age = orderObj.customer.age;
+const discount = age < 18 ? 0.1 
+: age <= 60 ? 0 
+: 0.15; 
+console.log(discount);
+
+const finalTotal = total * (1 -discount);
+
+let deliveryPrice
+
+if (finalTotal < 500) {deliveryPrice = 100}
+else if (finalTotal < 1500) {deliveryPrice = 50}
+else {deliveryPrice = 0}
+
+console.log(deliveryPrice);
+
+let deliveryDayName = orderObj.deliveryDay
+
+switch (deliveryDayName) {
+	case 1:
+		console.log('Понеділок')
+		break
+	case 2:
+		console.log('Вівторок')
+		break
+	case 3:
+		console.log(`Середа`)
+		break
+	case 4:
+		console.log(`Четверг`)
+		break
+	case 5:
+		console.log(`П'ятниця`)
+		break
+	case 6:
+		console.log(`Субота`)
+		break
+	case 7:
+		console.log(`Неділя`)
+		break
+	default:
+		console.log(`Невідомий день`)
+}
+
+let bonusSum = 0
+
+for (let i = 1, limit = 20; i <= limit; i++) {
+    if (i % 3 === 0) {
+		continue;
+}
+console.log(i);
+}
